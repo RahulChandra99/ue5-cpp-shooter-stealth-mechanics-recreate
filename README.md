@@ -1,52 +1,46 @@
-# hitman-stealth-recreate
-Recreating Stealth, Parkour and Shooting Mechanics from Hitman and Uncharted
+# Shooter-Stealth Mechanics using UE5 C++  
 
-For -> IO Interactive
-References -> Metal Gear Solid, Hitman, Splinter Cell, Uncharted, Assassin Creed, Spiderman , Batman
+## References  
+Inspired by **IO Interactive** titles and other stealth-action games:  
+- **Hitman, Metal Gear Solid, Splinter Cell** – Stealth & disguise mechanics  
+- **Uncharted, Assassin's Creed, Spiderman** – Parkour & traversal  
+- **Batman Arkham series** – Dynamic takedowns & gadgets  
 
-Video References -> 
-1. 
+🔗 **Video References**:  
+- [Dynamic Cover System](https://www.youtube.com/results?search_query=unreal+engine+dynamic+cover+system)  
+- [Stealth & Takedown System](https://www.youtube.com/watch?v=upbSynSXrg4&ab_channel=Superkal)  
 
+## TODO  
 
+### Hitman-Style Stealth Mechanics  
+- [ ] **Interactive Doors** – Open/close doors, locked doors using keycards or keys  
+- [ ] **Object Interaction** – Pick/drop items dynamically based on height (F key)  
+- [ ] **Weapon Wheel** – Hold middle mouse to show weapon selection  
+- [ ] **ADS & Shooting** – Aim down sights and fire weapons  
+- [ ] **Wire Stealth Takedown** – Silent eliminations using garrote wire  
+- [ ] **Clothes Change/Disguise** – Switch outfits to blend in  
+- [ ] **Body Dragging** – Move unconscious or dead NPCs  
+- [ ] **Instinct Vision** – Hold *Ctrl* to highlight objects of interest  
+- [ ] **Cover System** – Take cover, peek, and move dynamically  
+- [ ] **Gun Switching** – Swap between different weapons  
 
+### Locomotion & Parkour  
+- [ ] **Walking & Running** – Hold *Shift* to sprint, no toggle  
+- [ ] **Crouching** – *C* toggles crouch, Shift + Crouch allows sprinting while crouched  
+- [ ] **Camera & Movement Sync** – Smooth third-person movement  
+- [ ] **Traversal System** – Vaulting, jumping, rolling, and sliding  
 
+### Shooter Mechanics  
+- [ ] **Gunplay System** – ADS, recoil, hit detection  
+- [ ] **Cover-Based Shooting** – Shoot while in cover  
+- [ ] **Different Weapons** – Pistol, shotgun, sniper, SMG, etc.  
+- [ ] **Ammo & Reload System** – Weapon-based reload mechanics  
+- [ ] **Silencers & Suppressed Fire** – Noise-based detection  
 
+### General Gameplay Features  
+- [ ] **Mini-Map & Radar** – Display enemies, objectives, and points of interest  
+- [ ] **Footstep Sounds** – Dynamic sounds based on surface material  
+- [ ] **Health & Medkit System** – Healing mechanics  
+- [ ] **Stamina System** – Sprinting and actions drain stamina  
 
-TODO
-
-Hitman System
-- [ ] Interactions : Door Open and Close
-- [ ] Door open using keycard or key
-- [ ] Interactions : Picking and Dropping object based on where object is kept, down or above using F key
-- [ ] Hold middle mouse button to show weapons
-- [ ] ads and shooting
-- [ ] wire stealth takedown
-- [ ] Clothes change/disguise
-- [ ] Drag Body
-- [ ] ctrl hold to see items of interest
-- [ ] Cover System 
-- [ ] Gun Switching
-
-Locomotion System
-- [ ] Walk 
-- [ ] shift run hold not toggle
-- [ ] crouch c toggle not hold
-- [ ] when crouch and shift is pressed running while crouched
-- [ ] camera look and player movement
-- [ ] vaulting
-- [ ] jumping
-- [ ] roll 
-- [ ] slide
-
-General Mechanics
-- [ ] create map radar
-- [ ] Foot steps sound based on surface
-- [ ] Health and Medikit system
-- [ ] Stamina System
-- [ ] Diffrent Guns like shotgun , pistol, sniper etc.
-- [ ] 
-
-
-References
-- [ ] https://www.youtube.com/results?search_query=unreal+engine+dynamic+cover+system+ → Dynamic Cover System
-- [ ] https://www.youtube.com/watch?v=upbSynSXrg4&ab_channel=Superkal
+🔥 **Work in Progress!** 

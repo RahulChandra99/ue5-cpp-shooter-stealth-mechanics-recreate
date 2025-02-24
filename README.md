@@ -43,4 +43,4 @@ Inspired by **IO Interactive** titles and other stealth-action games:
 - [ ] **Health & Medkit System** – Healing mechanics  
 - [ ] **Stamina System** – Sprinting and actions drain stamina  
 
-🔥 **Work in Progress!** 
+**Work in Progress!** 

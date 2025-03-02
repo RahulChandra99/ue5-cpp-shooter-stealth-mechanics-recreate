@@ -35,6 +35,7 @@ protected:
 	void ToggleCrouch();
 
 	void Sprint();
+	void Walk();
 
 	void EquipWeapon(int WeaponIndex);
 	void SelectWeapon1();
@@ -66,6 +67,11 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player | Movement", meta = (AllowPrivateAccess = true))
 	bool bIsSprinting;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player | Movement", meta = (AllowPrivateAccess = true))
+	bool bIsWalking;
+
+	//Weapons
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Player | Weapons", meta = (AllowPrivateAccess = true))
 	TArray<TSubclassOf<APWeapon>> WeaponClasses;
 
@@ -85,5 +91,7 @@ public:
 	FORCEINLINE USpringArmComponent* GetSpringArm() const { return SpringArmComp; }
 
 	FORCEINLINE bool GetSprinting() const { return bIsSprinting; }
+
+	FORCEINLINE bool GetWalking() const { return bIsWalking; }
 	
 };

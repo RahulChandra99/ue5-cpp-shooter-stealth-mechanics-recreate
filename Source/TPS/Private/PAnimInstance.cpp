@@ -35,6 +35,8 @@ void UPAnimInstance::UpdateAnimationProperties(float DeltaTtime)
 		PlayerVelocity = PCharacter->GetCharacterMovement()->Velocity;
 
 		bIsSprinting = PCharacter->GetSprinting();
+
+		bIsWalking = PCharacter->GetWalking();
 	}
 }
 

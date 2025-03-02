@@ -14,7 +14,8 @@ APCharacter::APCharacter():
 	BaseTurnRate(45.f),
 	BaseLookUpRate(45.f),
 	bIsFPActive(false),
-	bIsCrouching(false)
+	bIsCrouching(false),
+	bIsWalking(false)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -149,6 +150,20 @@ void APCharacter::Sprint()
 	}
 }
 
+void APCharacter::Walk()
+{
+	bIsWalking = !bIsWalking;
+
+	if(bIsWalking)
+	{
+		GetCharacterMovement()->MaxWalkSpeed-= 300.0f;
+	}
+	else
+	{
+		GetCharacterMovement()->MaxWalkSpeed+= 300.0f;
+	}
+}
+
 void APCharacter::EquipWeapon(int WeaponIndex)
 {
 	if(WeaponIndex < 0 || WeaponIndex >= WeaponClasses.Num()) return;
@@ -199,6 +214,8 @@ void APCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAction("Crouch",IE_Pressed,this,&APCharacter::ToggleCrouch);
 	PlayerInputComponent->BindAction("Sprint",IE_Pressed,this,&APCharacter::Sprint);
 	PlayerInputComponent->BindAction("Sprint",IE_Released,this,&APCharacter::Sprint);
+	PlayerInputComponent->BindAction("Walk",IE_Pressed,this,&APCharacter::Walk);
+	PlayerInputComponent->BindAction("Walk",IE_Released,this,&APCharacter::Walk);
 	PlayerInputComponent->BindAction("Jump",IE_Pressed,this,&ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump",IE_Released,this,&ACharacter::StopJumping);
 	PlayerInputComponent->BindAction("ToggleCamera",IE_Pressed,this,&APCharacter::ToggleCamera);

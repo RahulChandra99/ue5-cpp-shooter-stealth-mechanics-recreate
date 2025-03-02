@@ -42,4 +42,7 @@ private:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
 	bool bIsSprinting;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	bool bIsWalking;
 };

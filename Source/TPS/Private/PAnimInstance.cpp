@@ -29,6 +29,12 @@ void UPAnimInstance::UpdateAnimationProperties(float DeltaTtime)
 		{
 			bIsAccelerating = false;
 		}
+
+		bIsCrouched = PCharacter->GetCharacterMovement()->IsCrouching();
+
+		PlayerVelocity = PCharacter->GetCharacterMovement()->Velocity;
+
+		bIsSprinting = PCharacter->GetSprinting();
 	}
 }
 

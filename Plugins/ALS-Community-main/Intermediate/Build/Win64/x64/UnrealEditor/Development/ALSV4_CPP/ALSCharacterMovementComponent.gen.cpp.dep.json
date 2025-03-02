@@ -1,0 +1,43 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\als-community-main\\intermediate\\build\\win64\\unrealeditor\\inc\\alsv4_cpp\\uht\\alscharactermovementcomponent.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\intermediate\\build\\win64\\x64\\tpseditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\als-community-main\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\alsv4_cpp\\definitions.alsv4_cpp.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\als-community-main\\source\\alsv4_cpp\\public\\character\\alscharactermovementcomponent.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementcomponent.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navigationavoidancetypes.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\navigationavoidancetypes.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\public\\ai\\rvoavoidanceinterface.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rvoavoidanceinterface.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\pawnmovementcomponent.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\navmovementcomponent.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\pathfollowingagentinterface.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\pathfollowingagentinterface.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\movementcomponent.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\movementcomponent.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\navmovementcomponent.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\pawnmovementcomponent.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\interfaces\\networkpredictioninterface.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\networkpredictioninterface.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\source\\runtime\\engine\\public\\charactermovementcomponentasync.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponentasync.generated.h",
+            "d:\\ue 5\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\als-community-main\\source\\alsv4_cpp\\public\\library\\alscharacterstructlibrary.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\als-community-main\\source\\alsv4_cpp\\public\\library\\alscharacterenumlibrary.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\als-community-main\\intermediate\\build\\win64\\unrealeditor\\inc\\alsv4_cpp\\uht\\alscharacterenumlibrary.generated.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\als-community-main\\intermediate\\build\\win64\\unrealeditor\\inc\\alsv4_cpp\\uht\\alscharacterstructlibrary.generated.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\als-community-main\\intermediate\\build\\win64\\unrealeditor\\inc\\alsv4_cpp\\uht\\alscharactermovementcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

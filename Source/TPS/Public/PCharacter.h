@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "PCharacter.generated.h"
 
+class APWeapon;
 class UCameraComponent;
 class USpringArmComponent;
 
@@ -29,9 +30,15 @@ protected:
 	
 	void BeginCrouch();
 	void EndCrouch();
-
-	UFUNCTION(BlueprintCallable)
+	
 	void ToggleCamera();
+	void ToggleCrouch();
+
+	void Sprint();
+
+	void EquipWeapon(int WeaponIndex);
+	void SelectWeapon1();
+	void SelectWeapon2();
 
 private:
 
@@ -53,6 +60,21 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player | Movement", meta = (AllowPrivateAccess = true))
 	bool bIsFPActive;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player | Movement", meta = (AllowPrivateAccess = true))
+	bool bIsCrouching;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player | Movement", meta = (AllowPrivateAccess = true))
+	bool bIsSprinting;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Player | Weapons", meta = (AllowPrivateAccess = true))
+	TArray<TSubclassOf<APWeapon>> WeaponClasses;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player | Weapons", meta = (AllowPrivateAccess = true))
+	APWeapon* CurrentWeapon;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player | Weapons", meta = (AllowPrivateAccess = true))
+	int CurrentWeaponIndex;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -61,5 +83,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	FORCEINLINE USpringArmComponent* GetSpringArm() const { return SpringArmComp; }
+
+	FORCEINLINE bool GetSprinting() const { return bIsSprinting; }
 	
 };

@@ -29,8 +29,17 @@ private:
 	float Speed;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	FVector PlayerVelocity;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
 	bool bIsInAir;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
 	bool bIsAccelerating;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	bool bIsCrouched;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	bool bIsSprinting;
 };

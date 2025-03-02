@@ -3,6 +3,7 @@
 
 #include "TPS/Public/PCharacter.h"
 
+#include "PWeapon.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PawnMovementComponent.h"
@@ -12,7 +13,8 @@
 APCharacter::APCharacter():
 	BaseTurnRate(45.f),
 	BaseLookUpRate(45.f),
-	bIsFPActive(false)
+	bIsFPActive(false),
+	bIsCrouching(false)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -43,6 +45,9 @@ APCharacter::APCharacter():
 
 	FpCameraComp->SetActive(false);
 	TpCameraComp->SetActive(true);
+
+	CurrentWeapon = nullptr;
+	CurrentWeaponIndex = -1;
 }
 
 // Called when the game starts or when spawned
@@ -115,6 +120,64 @@ void APCharacter::ToggleCamera()
 	}
 }
 
+void APCharacter::ToggleCrouch()
+{
+	bIsCrouching = !bIsCrouching;
+	
+	if(bIsCrouching)
+	{
+		Crouch();
+		
+	}
+	else
+	{
+		UnCrouch();
+	}
+}
+
+void APCharacter::Sprint()
+{
+	bIsSprinting = !bIsSprinting;
+
+	if(bIsSprinting)
+	{
+		GetCharacterMovement()->MaxWalkSpeed+= 200.0f;
+	}
+	else
+	{
+		GetCharacterMovement()->MaxWalkSpeed-= 200.0f;
+	}
+}
+
+void APCharacter::EquipWeapon(int WeaponIndex)
+{
+	if(WeaponIndex < 0 || WeaponIndex >= WeaponClasses.Num()) return;
+
+	// Destroy current weapon if it exists
+	if (CurrentWeapon)
+	{
+		CurrentWeapon->Destroy();
+		CurrentWeapon = nullptr;
+	}
+
+	// Spawn and attach the new weapon
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = this;
+	SpawnParams.Instigator = GetInstigator();
+
+	APWeapon* NewWeapon = GetWorld()->SpawnActor<APWeapon>(WeaponClasses[WeaponIndex], FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+
+	if (NewWeapon)
+	{
+		NewWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("M4A1Socket"));
+		CurrentWeapon = NewWeapon;
+		CurrentWeaponIndex = WeaponIndex;
+	}
+}
+
+void APCharacter::SelectWeapon1() { EquipWeapon(0); }
+void APCharacter::SelectWeapon2() { EquipWeapon(1); }
+
 // Called every frame
 void APCharacter::Tick(float DeltaTime)
 {
@@ -133,10 +196,14 @@ void APCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAxis("LookUp",this,&APCharacter::LookUpAtRate);
 	PlayerInputComponent->BindAxis("Turn",this,&APCharacter::TurnAtRate);
 
-	PlayerInputComponent->BindAction("Crouch",IE_Pressed,this,&APCharacter::BeginCrouch);
-	PlayerInputComponent->BindAction("Crouch",IE_Released,this,&APCharacter::EndCrouch);
+	PlayerInputComponent->BindAction("Crouch",IE_Pressed,this,&APCharacter::ToggleCrouch);
+	PlayerInputComponent->BindAction("Sprint",IE_Pressed,this,&APCharacter::Sprint);
+	PlayerInputComponent->BindAction("Sprint",IE_Released,this,&APCharacter::Sprint);
 	PlayerInputComponent->BindAction("Jump",IE_Pressed,this,&ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump",IE_Released,this,&ACharacter::StopJumping);
 	PlayerInputComponent->BindAction("ToggleCamera",IE_Pressed,this,&APCharacter::ToggleCamera);
+
+	PlayerInputComponent->BindAction("SelectWeapon1", IE_Pressed, this, &APCharacter::SelectWeapon1);
+	PlayerInputComponent->BindAction("SelectWeapon2", IE_Pressed, this, &APCharacter::SelectWeapon2);
 }
 

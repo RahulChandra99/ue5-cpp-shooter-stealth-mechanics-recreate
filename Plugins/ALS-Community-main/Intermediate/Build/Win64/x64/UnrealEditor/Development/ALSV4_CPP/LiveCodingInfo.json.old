@@ -1,0 +1,57 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ALSV4_CPP.1.cpp.obj": [
+			"ALSAIController.gen.cpp.obj",
+			"ALSAnimationStructLibrary.gen.cpp.obj",
+			"ALSAnimNotifyCameraShake.gen.cpp.obj",
+			"ALSAnimNotifyFootstep.gen.cpp.obj",
+			"ALSAnimNotifyGroundedEntryState.gen.cpp.obj",
+			"ALSBaseCharacter.gen.cpp.obj"
+		],
+		"Module.ALSV4_CPP.2.cpp.obj": [
+			"ALSCharacter.gen.cpp.obj",
+			"ALSCharacterAnimInstance.gen.cpp.obj",
+			"ALSCharacterEnumLibrary.gen.cpp.obj",
+			"ALSCharacterMovementComponent.gen.cpp.obj",
+			"ALSCharacterStructLibrary.gen.cpp.obj",
+			"ALSDebugComponent.gen.cpp.obj",
+			"ALSMantleComponent.gen.cpp.obj"
+		],
+		"Module.ALSV4_CPP.3.cpp.obj": [
+			"ALSMathLibrary.gen.cpp.obj",
+			"ALSNotifyStateEarlyBlendOut.gen.cpp.obj",
+			"ALSNotifyStateMovementAction.gen.cpp.obj",
+			"ALSNotifyStateOverlayOverride.gen.cpp.obj",
+			"ALSPlayerCameraBehavior.gen.cpp.obj",
+			"ALSPlayerCameraManager.gen.cpp.obj",
+			"ALSPlayerController.gen.cpp.obj",
+			"ALSStructEnumLibrary.gen.cpp.obj",
+			"ALSV4_CPP.init.gen.cpp.obj",
+			"ALS_BTTask_GetRandomLocation.gen.cpp.obj",
+			"ALS_BTTask_SetFocusToPlayer.gen.cpp.obj",
+			"ALSV4_CPP.cpp.obj",
+			"ALSAIController.cpp.obj",
+			"ALS_BTTask_GetRandomLocation.cpp.obj",
+			"ALS_BTTask_SetFocusToPlayer.cpp.obj",
+			"ALSBaseCharacter.cpp.obj"
+		],
+		"Module.ALSV4_CPP.4.cpp.obj": [
+			"ALSCharacter.cpp.obj",
+			"ALSCharacterMovementComponent.cpp.obj",
+			"ALSPlayerCameraManager.cpp.obj",
+			"ALSPlayerController.cpp.obj",
+			"ALSCharacterAnimInstance.cpp.obj",
+			"ALSPlayerCameraBehavior.cpp.obj",
+			"ALSAnimNotifyCameraShake.cpp.obj",
+			"ALSAnimNotifyFootstep.cpp.obj",
+			"ALSAnimNotifyGroundedEntryState.cpp.obj",
+			"ALSNotifyStateEarlyBlendOut.cpp.obj",
+			"ALSNotifyStateMovementAction.cpp.obj",
+			"ALSNotifyStateOverlayOverride.cpp.obj",
+			"ALSDebugComponent.cpp.obj",
+			"ALSMantleComponent.cpp.obj",
+			"ALSMathLibrary.cpp.obj"
+		]
+	}
+}

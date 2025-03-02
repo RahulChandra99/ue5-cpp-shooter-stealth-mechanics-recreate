@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-ALSV4_CPP.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\GameDevelopment\UnrealEngine\Projects\TPS\Intermediate\Build\Win64\x64\TPSEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
+"D:\GameDevelopment\UnrealEngine\Projects\TPS\Plugins\ALS-Community-main\Intermediate\Build\Win64\x64\UnrealEditor\Development\ALSV4_CPP\Module.ALSV4_CPP.1.cpp.obj"
+"D:\GameDevelopment\UnrealEngine\Projects\TPS\Plugins\ALS-Community-main\Intermediate\Build\Win64\x64\UnrealEditor\Development\ALSV4_CPP\Module.ALSV4_CPP.2.cpp.obj"
+"D:\GameDevelopment\UnrealEngine\Projects\TPS\Plugins\ALS-Community-main\Intermediate\Build\Win64\x64\UnrealEditor\Development\ALSV4_CPP\Module.ALSV4_CPP.3.cpp.obj"
+"D:\GameDevelopment\UnrealEngine\Projects\TPS\Plugins\ALS-Community-main\Intermediate\Build\Win64\x64\UnrealEditor\Development\ALSV4_CPP\Module.ALSV4_CPP.4.cpp.obj"
+"D:\GameDevelopment\UnrealEngine\Projects\TPS\Plugins\ALS-Community-main\Intermediate\Build\Win64\x64\UnrealEditor\Development\ALSV4_CPP\Default.rc2.res"
+/OUT:"D:\GameDevelopment\UnrealEngine\Projects\TPS\Plugins\ALS-Community-main\Intermediate\Build\Win64\x64\UnrealEditor\Development\ALSV4_CPP\UnrealEditor-ALSV4_CPP.lib"

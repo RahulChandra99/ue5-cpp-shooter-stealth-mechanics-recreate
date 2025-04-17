@@ -6,6 +6,7 @@
 #include "Animation/AnimInstance.h"
 #include "PAnimInstance.generated.h"
 
+enum class EWeaponTypes : uint8;
 /**
  * 
  */
@@ -25,6 +26,12 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	class APCharacter* PCharacter;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+	class AAIBaseClass* ECharacter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category = "_RCShooter | Movement", meta = (AllowPrivateAccess = "true"))
+	float MovementOffsetYaw;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
 	float Speed;
 
@@ -39,10 +46,32 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
 	bool bIsCrouched;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	bool bIsEquiping;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
 	bool bIsSprinting;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
 	bool bIsWalking;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	bool bIsProning;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	bool bIsAiming;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	bool bIsDead;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "_RCShooter | Weapons", meta = (AllowPrivateAccess = "true"))
+	EWeaponTypes CurrentWeaponEnum;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Player|Movement", meta = (AllowPrivateAccess = true))
+	bool bIsShieldAbilityActive;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "_RCShooter | Weapons", meta = (AllowPrivateAccess = "true"))
+	FRotator AimOffset;
+	
 };

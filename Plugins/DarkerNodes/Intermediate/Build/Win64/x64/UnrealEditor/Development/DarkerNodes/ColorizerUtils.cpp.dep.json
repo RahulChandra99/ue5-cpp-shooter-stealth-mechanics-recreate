@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\darkernodes\\source\\darkernodes\\private\\colorizer\\colorizerutils.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\intermediate\\build\\win64\\x64\\tpseditor\\development\\unrealed\\sharedpch.unrealed.project.novalfmtstr.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\darkernodes\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\darkernodes\\definitions.darkernodes.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\darkernodes\\source\\darkernodes\\private\\colorizer.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\darkernodes\\source\\darkernodes\\public\\darkernodessettings.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\darkernodes\\intermediate\\build\\win64\\unrealeditor\\inc\\darkernodes\\uht\\darkernodessettings.generated.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\darkernodes\\source\\darkernodes\\private\\lib\\brushdatabase.h",
+            "d:\\ue 5\\ue_5.4\\engine\\source\\runtime\\slate\\public\\slatematerialbrush.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\darkernodes\\intermediate\\build\\win64\\unrealeditor\\inc\\darkernodes\\uht\\brushdatabase.generated.h",
+            "d:\\gamedevelopment\\unrealengine\\projects\\hitman-stealth-recreate\\plugins\\darkernodes\\source\\darkernodes\\private\\lib\\colorlib.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
